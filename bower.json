@@ -1,0 +1,17 @@
+{
+  "name": "pst",
+  "description": "App which tracks physical stats",
+  "main": "index.js",
+  "authors": [
+    "Kharaman Vladimir"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/KharamanV/PST",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

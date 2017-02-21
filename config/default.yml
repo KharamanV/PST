@@ -1,0 +1,5 @@
+# https://github.com/lorenwest/node-config
+# Config loading order: https://github.com/lorenwest/node-config/wiki/Configuration-Files
+app:
+  port: 3000
+  host: localhost
