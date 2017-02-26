@@ -1,3 +1,4 @@
 angular.module('stats', [
-  'ngRoute'
+  'ngRoute',
+  'core.stat'
 ]);

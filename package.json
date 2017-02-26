@@ -22,13 +22,17 @@
     "bower": "^1.8.0",
     "g": "^2.0.1",
     "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.4.1",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
     "config": "^1.25.1",
     "express": "^4.14.1",
     "js-yaml": "^3.8.1",
-    "mongodb": "^2.2.24"
+    "mongodb": "^2.2.24",
+    "mongoose": "^4.8.5"
   }
 }

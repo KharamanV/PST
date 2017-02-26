@@ -1,0 +1,1 @@
+angular.module('core.template').run(['$templateCache', function($templateCache) {$templateCache.put('stats/stats.html','<div ng-repeat="stat in $ctrl.stats">\n    <p>Arm: {{ stat.arm }}</p>\n    <p>Waist: {{ stat.waist }}</p>\n</div>');}]);

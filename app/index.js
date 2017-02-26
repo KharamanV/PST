@@ -4,8 +4,11 @@ const
     express = require('express'),
     app = express();
 
-app.use(express.static(path.join(__dirname, '/../public')));
+require('./service/mongodb');
 
+app.use(express.static(path.join(__dirname, '/../public')));
+app.use(require('body-parser').urlencoded({ extended: true }));
+app.use(require('body-parser').json());
 app.use(require('./router'));
 
 require('./middlewares').forEach(middleware => app.use(middleware));
