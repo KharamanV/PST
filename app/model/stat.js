@@ -4,11 +4,11 @@ const
 
 
 let StatSchema = new Schema({
-  weight: Number,
-  waist: Number,
-  arm: Number,
-  date: { type: Date, default: Date.now }
+  weight: {type: Number, required: true},
+  waist: {type: Number, required: true},
+  arm: {type: Number, required: true},
+  date: {type: Date, default: Date.now},
+  sprint: {type: Schema.Types.ObjectId, ref: 'Sprint'}
 });
-
 
 module.exports = mongoose.model('Stat', StatSchema);

@@ -5,7 +5,7 @@ angular
 			$locationProvider.hashPrefix('!');
 
 			$routeProvider
-				.when('/stats', { template: '<stats></stats>' })
+				.when('/stats', {template: '<stats></stats>'})
 				.otherwise('/stats');
 		}
 	]);

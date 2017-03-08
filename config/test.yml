@@ -1,0 +1,3 @@
+# https://github.com/lorenwest/node-config
+# Config loading order: https://github.com/lorenwest/node-config/wiki/Configuration-Files
+mongo: mongodb://localhost/pst_test

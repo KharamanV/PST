@@ -6,6 +6,7 @@ mongoose.Promise = Promise;
 
 // Register models
 require('../model/stat');
+require('../model/sprint');
 
 // Connect to MongoDB
 mongoose.connection

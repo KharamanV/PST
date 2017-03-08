@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import concat from 'gulp-concat';
 import sourcemaps from 'gulp-sourcemaps';
 import templateCache from 'gulp-angular-templatecache';
+import mocha from 'gulp-mocha';
 
 const
   app = 'src/client/app',
@@ -35,6 +36,19 @@ gulp.task('templates', function () {
       module: 'core.template'
     }))
     .pipe(gulp.dest(`${app}/core/template`));
+});
+
+gulp.task('test', () => {
+  process.env.NODE_ENV = 'test';
+
+  gulp.src([
+    'app/**/*.{spec,integration}.js',
+    'test/**/*.spec.js',
+  ], {read: false})
+    .pipe(mocha({
+      compilers: 'js:babel-core/register',
+      reporter: 'nyan',
+    }));
 });
 
 gulp.task('default', ['templates', 'js'], () => {
