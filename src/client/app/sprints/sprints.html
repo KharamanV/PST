@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="text-center">Sprints</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <table class="table table-hover">
+                <tr>
+                    <th>Carbs</th>
+                    <th>Fat</th>
+                    <th>Protein</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                </tr>
+                <tr ng-repeat="sprint in $ctrl.sprints">
+                    <td>{{ sprint.carbohydrate }}</td>
+                    <td>{{ sprint.fat }}</td>
+                    <td>{{ sprint.protein }}</td>
+                    <td>{{ sprint.start_date }}</td>
+                    <td>{{ sprint.end_date }}</td>
+                    <td>
+                        <button type="button" class="btn btn-danger" ng-click="$ctrl.deleteSprint(sprint)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <form ng-submit="$ctrl.addSprint()">
+                <input ng-model="$ctrl.sprint.carbohydrate" type="number" placeholder="Carbs" class="form-control">
+                <input ng-model="$ctrl.sprint.fat" type="number" placeholder="Fat" class="form-control">
+                <input ng-model="$ctrl.sprint.protein" type="number" placeholder="Protein" class="form-control">
+                <input ng-model="$ctrl.sprint.start_date" type="date" placeholder="Start date" class="form-control">
+                <input ng-model="$ctrl.sprint.end_date" type="date" placeholder="End date" class="form-control">
+                <button type="submit" class="btn btn-info">Add</button>
+            </form>
+        </div>
+    </div>
+</div>

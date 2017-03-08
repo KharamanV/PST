@@ -6,6 +6,7 @@ angular
 
 			$routeProvider
 				.when('/stats', {template: '<stats></stats>'})
+				.when('/sprints', {template: '<sprints></sprints>'})
 				.otherwise('/stats');
 		}
 	]);
