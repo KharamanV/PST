@@ -37,7 +37,13 @@ function create(req, res) {
   let stat = new Stat(req.body);
 
   return stat.save()
-    .then(stat => res.status(201).json(stat))
+    .then(stat => 
+      Stat.findOne(stat)
+        .populate('sprint')
+        .exec()
+        .then(stat => res.status(201).json(stat))
+        .catch(handleError(res))
+    )
     .catch(validateError(res));
 }
 
